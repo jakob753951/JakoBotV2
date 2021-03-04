@@ -36,5 +36,10 @@ class ConfigTests(unittest.TestCase):
 		cfg = utils.load_config('ConfigTest.json')
 		self.assertEqual(cfg.a.b, test_string)
 
+
+class CogsTests(unittest.TestCase):
+	def test_get_cog_names_returns_files_in_dir(self):
+		print(utils.get_cog_names('Cogs'))
+
 if __name__ == '__main__':
 	unittest.main()
